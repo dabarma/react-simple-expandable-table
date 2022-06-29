@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './react-simple-expandable-table.css';
 import toggleCollapse from './img/toggle-collapse.png';
 import toggleExpand from './img/toggle-expand.png';
 
