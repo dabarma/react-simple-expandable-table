@@ -3,19 +3,19 @@ table {
     border-spacing: 0;
 }
 
-.expandable-table{
+.expandable-table {
     width: 100%;
 }
 
-.expandable-table thead{
+.expandable-table thead {
     border-bottom: 1px solid #dadada;
 }
 
-.expandable-table thead tr{
-    height: 50px;   
+.expandable-table thead tr {
+    height: 50px;
 }
 
-.expandable-table thead tr th{
+.expandable-table thead tr th {
     text-align: left;
     padding: 8px 10px;
 }
