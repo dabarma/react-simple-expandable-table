@@ -69,9 +69,7 @@ function Demo(){
         <React.Fragment>
             <div>
                 <ReactSimpleExpandableTable 
-                    data={'smooth'}
-                    IconSize={'5rem'}
-                    appearCoordinate={1200}
+                    data={data}
                 />    
             </div> 
         </React.Fragment>
