@@ -16,7 +16,7 @@ or
 
 ``` 
 import React from 'react';
-import ReactSimpleExpandableTable from 'react-simple-expandable-table';
+import { ReactSimpleExpandableTable } from 'react-simple-expandable-table';
 
 function Demo(){
 
@@ -66,13 +66,7 @@ function Demo(){
   }
 
     return(
-        <React.Fragment>
-            <div>
-                <ReactSimpleExpandableTable 
-                    data={data}
-                />    
-            </div> 
-        </React.Fragment>
+        <ReactSimpleExpandableTable data={tableDefinition}></ReactSimpleExpandableTable>
     )
 }
 
