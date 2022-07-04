@@ -1,10 +1,9 @@
 {
   "name": "react-simple-expandable-table",
-  "version": "0.0.3",
+  "version": "0.0.21",
   "description": "Simple expandable table component for React",
-  "main": "./lib/react-simple-expandable-table.js",
   "scripts": {
-    "build": "webpack"
+    "rollup": "rollup -c"
   },
   "keywords": [
     "react",
@@ -18,26 +17,26 @@
     "type": "git",
     "url": "https://github.com/dabarma/react-simple-expandable-table"
   },
-  "peerDependencies": {
-    "prop-types": "^15.6.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
-  },
   "devDependencies": {
-    "babel-core": "^6.21.0",
-    "babel-loader": "^7.1.4",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-react": "^6.16.0",
-    "babel-preset-stage-0": "^6.24.1",
-    "css-loader": "^3.6.0",
-    "file-loader": "^6.2.0",
-    "path": "^0.12.7",
-    "prop-types": "^15.6.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "style-loader": "^1.1.3",
-    "url-loader": "^4.1.1",
-    "webpack": "^5.73.0",
-    "webpack-cli": "^4.10.0"
-  }
+    "@rollup/plugin-commonjs": "^22.0.1",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-typescript": "^8.3.3",
+    "@types/react": "^18.0.14",
+    "rollup": "^2.75.7",
+    "rollup-plugin-dts": "^4.2.2",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-terser": "^7.0.2",
+    "tslib": "^2.4.0",
+    "typescript": "^4.7.4"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts"
 }
