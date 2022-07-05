@@ -1,1 +1,2 @@
 export { default as ReactSimpleExpandableTable } from "./react-simple-expandable-table";
+export { ReactSimpleExpandableTableData} from "./react-simple-expandable-table/react-simple-expandable-table-props"

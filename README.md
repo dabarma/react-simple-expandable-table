@@ -21,46 +21,46 @@ import { ReactSimpleExpandableTable } from 'react-simple-expandable-table';
 function Demo(){
 
     const tableDefinition: ReactSimpleExpandableTableData = {
-    columns: [
-        {
-            description: 'col1',
-            dataBinding: 'col1-data',
-        },
-        {
-            description: 'col2',
-            dataBinding: 'col2-data'
-        },
-    ],
-    rows: [
-        {           
-            data: [
-                {'col1-data': 'test1-1'},
-                {'col1-data': 'test1-2'},
-            ],
-            rows: [
-                {
-                    data: [
-                        {'col1-data': 'test1-1-1'},
-                        {'col1-data': 'test1-1-2'},
-                    ],
-                    rows: [
-                        {
-                            data: [
-                                {'col1-data': 'test1-1-1-1'},
-                                {'col1-data': 'test1-1-2-1'},
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            data: [
-                {'col1-data': 'test2-1'},
-                {'col1-data': 'test2-2'}
-            ],
-        }
-      ]
+        columns: [
+            {
+                description: 'col1',
+                dataBinding: 'col1-data',
+            },
+            {
+                description: 'col2',
+                dataBinding: 'col2-data'
+            },
+        ],
+        rows: [
+            {           
+                data: {
+                    'col1-data': 'test1',
+                    'col2-data': 'test2'      
+                },
+                rows: [
+                    {
+                        data: {
+                            'col1-data': 'test1-1',
+                            'col2-data': 'test2-1'      
+                        },
+                        rows: [
+                            {
+                                data: {
+                                    'col1-data': 'test1-1-1',
+                                    'col2-data': 'test2-1-1'      
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                data: {
+                    'col1-data': 'test3',
+                    'col2-data': 'test4'      
+                },
+            }
+        ]
     }
 
     return(

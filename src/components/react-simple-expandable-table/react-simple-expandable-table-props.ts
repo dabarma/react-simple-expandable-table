@@ -14,6 +14,6 @@ export class ReactSimpleExpandableTableDataColumn {
 }
 
 export class ReactSimpleExpandableTableDataRow {
-    public data?: Array<{[key: string]: string}>;
+    public data?: {[key: string]: string}
     public rows?: ReactSimpleExpandableTableDataRow[];
 }

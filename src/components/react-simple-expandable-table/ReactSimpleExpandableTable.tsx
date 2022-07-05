@@ -27,7 +27,7 @@ export default function ReactSimpleExpandableTable(props: ReactSimpleExpandableT
             </tr>)
     }
 
-    const renderRow = (row: any, index: string, deep = 0) => {
+    const renderRow = (row: ReactSimpleExpandableTableDataRow, index: string, deep = 0) => {
 
         const expanded = expandedRows.includes(index)
         const hasChilds = row.rows && row.rows.length > 0;
@@ -42,11 +42,14 @@ export default function ReactSimpleExpandableTable(props: ReactSimpleExpandableT
                 <td></td>
             }
             {props.data?.columns.map((column: any, index: number) => {
-                return <td key={index}>{column.render ? column.render(row[column.dataBinding]) : row[column.dataBinding]}</td>
+                if(row.data)
+                    return <td key={index}>{column.render ? column.render(row.data[column.dataBinding]) : row.data[column.dataBinding]}</td>
+                else
+                    return <td></td>
             })}</tr>);
 
         if (expanded && hasChilds) {
-            row.rows.forEach((subRow: any, index: number) => {
+            row.rows?.forEach((subRow: any, index: number) => {
                 tds.push(renderRow(subRow, index.toString() + '-' + deep + '-' + index.toString(), deep + 1));
             });
         }

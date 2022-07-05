@@ -18,37 +18,38 @@ const data: ReactSimpleExpandableTableData = {
     ],
     rows: [
         {           
-            data: [
-                {'col1-data': 'test1-1'},
-                {'col1-data': 'test1-2'},
-            ],
+            data: {
+                'col1-data': 'test1',
+                'col2-data': 'test2'      
+            },
             rows: [
                 {
-                    data: [
-                        {'col1-data': 'test1-1-1'},
-                        {'col1-data': 'test1-1-2'},
-                    ],
+                    data: {
+                        'col1-data': 'test1-1',
+                        'col2-data': 'test2-1'      
+                    },
                     rows: [
                         {
-                            data: [
-                                {'col1-data': 'test1-1-1-1'},
-                                {'col1-data': 'test1-1-2-1'},
-                            ]
+                            data: {
+                                'col1-data': 'test1-1-1',
+                                'col2-data': 'test2-1-1'      
+                            }
                         }
                     ]
                 }
             ]
         },
         {
-            data: [
-                {'col1-data': 'test2-1'},
-                {'col1-data': 'test2-2'}
-            ],
+            data: {
+                'col1-data': 'test3',
+                'col2-data': 'test4'      
+            },
         }
     ]
 }
 
 describe("Simple expandable table", () => {
+
     test("renders the component", () => {
         render(<ReactSimpleExpandableTable data={data}></ ReactSimpleExpandableTable>)
     })
@@ -68,6 +69,13 @@ describe("Simple expandable table", () => {
         const actual = await component.findAllByRole("simple-expandable-row");
 
         expect(actual.length).toBe(3);
+    })
+    test('render row data', async () => {
+        const component = render(<ReactSimpleExpandableTable data={data}></ ReactSimpleExpandableTable>)
+
+        const dataRow = await component.findAllByText("test1");
+
+        expect(dataRow.length).toBeGreaterThan(0);
     })
 })
 
