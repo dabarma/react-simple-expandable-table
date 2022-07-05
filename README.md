@@ -20,50 +20,48 @@ import { ReactSimpleExpandableTable } from 'react-simple-expandable-table';
 
 function Demo(){
 
-    const data = {
+    const tableDefinition: ReactSimpleExpandableTableData = {
     columns: [
-      {
-        description: 'col1',
-        dataBinding: 'col1-data',
-        render: (data)=> {
-          return <div>{data}rendered</div>
-        }
-      },
-      {
-        description: 'col2',
-        dataBinding: 'col2-data'
-      },
-      {
-        description: 'col3',
-        dataBinding: 'col3-data'
-      },
-      {
-        description: 'col4',
-        dataBinding: 'col4-data'
-      },
-      {
-        description: 'col5',
-        dataBinding: 'col5-data'
-      }
+        {
+            description: 'col1',
+            dataBinding: 'col1-data',
+        },
+        {
+            description: 'col2',
+            dataBinding: 'col2-data'
+        },
     ],
     rows: [
-      {
-        'col1-data': 'test1',
-        'col2-data': 'test2',
-        'col3-data': 'test3',
-        'col4-data': 'test4',
-        'col5-data': 'test5',
-        rows: [
-            {
-                'col1-data': 'test1-1',
-                'col2-data': 'test2-1',
-                'col3-data': 'test3-1',
-                'col4-data': 'test4-1',
-                'col5-data': 'test5-1'
-            }
-      }
-    ]
-  }
+        {           
+            data: [
+                {'col1-data': 'test1-1'},
+                {'col1-data': 'test1-2'},
+            ],
+            rows: [
+                {
+                    data: [
+                        {'col1-data': 'test1-1-1'},
+                        {'col1-data': 'test1-1-2'},
+                    ],
+                    rows: [
+                        {
+                            data: [
+                                {'col1-data': 'test1-1-1-1'},
+                                {'col1-data': 'test1-1-2-1'},
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            data: [
+                {'col1-data': 'test2-1'},
+                {'col1-data': 'test2-2'}
+            ],
+        }
+      ]
+    }
 
     return(
         <ReactSimpleExpandableTable data={tableDefinition}></ReactSimpleExpandableTable>
