@@ -10,7 +10,7 @@ export class ReactSimpleExpandableTableData {
 export class ReactSimpleExpandableTableDataColumn {
     public description: string = '';
     public dataBinding: string = '';
-    public render?: () => void;
+    public render?: (cellValue: string) => JSX.Element;
 }
 
 export class ReactSimpleExpandableTableDataRow {
