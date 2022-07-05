@@ -16,7 +16,7 @@ or
 
 ``` 
 import React from 'react';
-import { ReactSimpleExpandableTable } from 'react-simple-expandable-table';
+import { ReactSimpleExpandableTable, ReactSimpleExpandableTableData } from 'react-simple-expandable-table';
 
 function Demo(){
 
